@@ -1,0 +1,74 @@
+<nav class="navbar mai-sub-header">
+  <div class="container">
+    <!-- Mega Menu structure-->
+    <nav class="navbar navbar-toggleable-sm">
+      <button type="button" data-toggle="collapse"
+              data-target="#mai-navbar-collapse"
+              aria-controls="#mai-navbar-collapse"
+              aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler hidden-md-up collapsed">
+        <div class="icon-bar"></div>
+      </button>
+      <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
+        <ul class="nav navbar-nav">
+
+          <!-- Overview -->
+          <li class="nav-item parent"
+              [ngClass]="{'open': selectedSubmenu === 'overview'}"
+              (click)="selectedSubmenu = 'overview'">
+            <a routerLink="./" role="button"
+               aria-expanded="false" class="nav-link">
+              <span class="icon s7-note2"></span><span>Overview</span>
+            </a>
+            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+              <li class="nav-item">
+                <a routerLink="./" class="nav-link">
+                  <span class="name">General</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="./timeline" class="nav-link">
+                  <span class="name">Timeline</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Categories -->
+          <li class="nav-item parent"
+              [ngClass]="{'open': selectedSubmenu === 'categories'}"
+              (click)="selectedSubmenu = 'categories'">
+            <a routerLink="./categories" role="button"
+               aria-expanded="false" class="nav-link">
+              <span class="icon s7-notebook"></span><span>Categories</span>
+            </a>
+            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+              <li class="nav-item" *ngFor="let category of categories">
+                <a href="#" class="nav-link" (click)="selectCategory($event, category.id)">
+                  <span class="name">{{ category.name }}</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Purchases -->
+          <li class="nav-item parent"
+              [ngClass]="{'open': selectedSubmenu === 'purchases'}"
+              (click)="selectedSubmenu = 'purchases'">
+            <a routerLink="./purchases" role="button"
+               aria-expanded="false" class="nav-link">
+              <span class="icon s7-cash"></span><span>Purchases</span>
+            </a>
+            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="name">Outcome</span></a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span class="name">Income</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</nav>

@@ -1,0 +1,32 @@
+<div class="mai-wrapper">
+  <app-account-sub-header></app-account-sub-header>
+
+  <div class="main-content container">
+    <div class="panel panel-default">
+      <div class="panel-heading panel-heading-divider">Create Account
+        <span class="panel-subtitle">Create new account with separate estimations</span>
+      </div>
+      <div class="panel-body">
+        <form>
+          <div class="form-group row">
+            <label class="col-3 col-form-label text-right">Name</label>
+            <div class="col-6">
+              <input type="text" name="name" [(ngModel)]="entity.name" class="form-control">
+            </div>
+          </div>
+
+          <div class="row pt-5">
+            <div class="col-6"></div>
+            <div class="col-6">
+              <p class="text-right">
+                <button type="submit" (click)="save()" class="btn btn-space btn-primary">Create</button>
+                <button class="btn btn-space btn-secondary">Cancel</button>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

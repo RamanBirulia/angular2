@@ -1,0 +1,72 @@
+<nav class="navbar mai-sub-header">
+  <div class="container">
+    <!-- Mega Menu structure-->
+    <nav class="navbar navbar-toggleable-sm">
+      <button type="button" data-toggle="collapse"
+              data-target="#mai-navbar-collapse"
+              aria-controls="#mai-navbar-collapse"
+              aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler hidden-md-up collapsed">
+        <div class="icon-bar"></div>
+      </button>
+      <div id="mai-navbar-collapse" class="navbar-collapse collapse mai-nav-tabs">
+        <ul class="nav navbar-nav">
+          <li class="nav-item parent" (click)="selectedSubitem = 'admins'" [ngClass]="{'open': selectedSubitem === 'admins'}">
+            <a routerLink="./" role="button" aria-expanded="false"
+               class="nav-link">
+              <span class="icon s7-users"></span><span>Admins</span>
+            </a>
+
+            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+              <li class="nav-item">
+                <a routerLink="./" class="nav-link">
+                  <span class="icon s7-server"></span>
+                  <span class="name">All users</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="./add" class="nav-link">
+                  <span class="icon s7-add-user"></span>
+                  <span class="name">Add User</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/history" class="nav-link">
+                  <span class="icon s7-notebook"></span>
+                  <span class="name">Log History</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="./roles" class="nav-link">
+                  <span class="icon s7-edit"></span>
+                  <span class="name">Roles</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item parent" (click)="selectedSubitem = 'public'" [ngClass]="{'open': selectedSubitem === 'public'}">
+            <a routerLink="./public" role="button" aria-expanded="false"
+               class="nav-link">
+              <span class="icon s7-users"></span><span>Public Users</span>
+            </a>
+
+            <ul class="mai-nav-tabs-sub mai-sub-nav nav">
+              <li class="nav-item">
+                <a routerLink="./" class="nav-link">
+                  <span class="icon s7-server"></span>
+                  <span class="name">All Public Users</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/users/add" class="nav-link">
+                  <span class="icon s7-add-user"></span>
+                  <span class="name">Add User</span></a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/users" class="nav-link">
+                  <span class="icon s7-graph1"></span>
+                  <span class="name">Statistic</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</nav>

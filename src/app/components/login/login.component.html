@@ -1,0 +1,51 @@
+<div class="mai-splash-screen">
+  <div class="mai-wrapper mai-login">
+    <div class="main-content container">
+      <div class="splash-container row">
+        <div class="col-sm-6 user-message"><span class="splash-message text-right">Hello!<br> is good to<br> see you again</span><span
+          class="alternative-message text-right">Don't have an account? <a routerLink="/signup">Sign Up</a></span></div>
+        <div class="col-sm-6 form-message"><img src="assets/img/logo-2x.png" alt="logo" width="169" height="28"
+                                                class="logo-img mb-4"><span
+          class="splash-description text-center mt-5 mb-5">Login to your account</span>
+          <form>
+            <div class="form-group">
+              <div class="input-group"><span class="input-group-addon"><i class="icon s7-user"></i></span>
+                <input [(ngModel)]="entity.username"
+                       id="username" type="text"
+                       name="username"
+                       placeholder="Username"
+                       autocomplete="off" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group"><span class="input-group-addon"><i class="icon s7-lock"></i></span>
+                <input [(ngModel)]="entity.password"
+                       name="password"
+                       id="password" type="password"
+                       placeholder="Password" class="form-control">
+              </div>
+            </div>
+            <div class="form-group login-submit">
+              <button data-dismiss="modal"
+                      type="submit"
+                      class="btn btn-lg btn-primary btn-block"
+              (click)="login()">Login</button>
+            </div>
+            <div class="form-group row login-tools">
+              <div class="col-6 login-remember">
+                <label class="custom-control custom-checkbox mt-2">
+                  <input type="checkbox" class="custom-control-input"><span
+                  class="custom-control-indicator"></span><span class="custom-control-description">Remember me</span>
+                </label>
+              </div>
+              <div class="col-6 pt-2 text-right login-forgot-password"><a routerLink="/restore-password">Forgot Password?</a></div>
+            </div>
+          </form>
+          <div class="out-links"><a href="#">© 2017 MYMGA</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="height: 500px"></div>
+<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/185463165&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
